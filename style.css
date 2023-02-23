@@ -2,10 +2,8 @@
 
 body{
     display: flex;
-    margin: 0vh auto;
     justify-content: center;
     flex-direction: column;
-    max-width: 40%;
     font-family: 'Reem Kufi', sans-serif;
     background-color: #0278ff;
     background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
@@ -14,7 +12,8 @@ label{
     color: #2c00ff;
 }
 .container{
-
+    min-width: 40%;
+    margin: 0vh auto;
     border-radius: 5px;
 }
 .section{
@@ -36,7 +35,7 @@ label{
 }
 .text{
     background-color: #d9d7d7;
-    margin-bottom: 15px;
+    width: 85%;
     padding: 5px 15px;
     overflow: scroll;
     box-sizing: border-box;
@@ -46,6 +45,12 @@ label{
     /* border: 2px solid; */
     width: fit-content;
     background-color: #d9d7d7;
+}
+.copied{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 #btn{
     background: rgba(15, 110, 255, 0.1);
@@ -71,10 +76,6 @@ label{
     font-size: 25px;
     letter-spacing: 5.5px;
 }
-/* .overflow{
-    overflow-x: scroll;
-    -ms-scrollbar-track-color: #d9d7d7;
-} */
 #size{
     border: solid thin grey;
     font-size: 15px;
@@ -89,16 +90,25 @@ label{
 .copy-text{
     cursor: pointer;
     border: none;
-    background-color: #d9d7d7;
-    font-size: 20px;
+    width: 9%;
+    background-color: #ededee;
+    font-size: 25px;
+    border-radius: 10px;
+    height: 50px;
+    transition: all 0.5s;
+}
+.copy-text:hover{
+    background-color: #d2d2d4;
 }
 .copy-text::before{
-    content: "Copied";
+    content: "copy";
+    background-color: #d2d2d4;
     position: absolute;
-    top: 16.3%;
+    color: rgb(34, 33, 33);
+    font-weight: bold;
+    top: 14.3%;
     font-size: 16px;
     right: 27.5rem;
-    background-color: #0278ff;
     border-radius: 10px;
     padding: 5px 20px;
     text-align: center;
@@ -108,11 +118,11 @@ label{
 .copy-text::after{
     content: "";
     position: absolute;
+    background-color: #d2d2d4;
     height: 10px;
     width: 10px;
-    background-color: #0F6EFF;
-    top: 19.45%;
-    left: 57.25rem;
+    top: 17.45%;
+    left: 58rem;
     transform: rotate(45deg);
 }
 .copy-text::after , .copy-text::before{
@@ -120,4 +130,30 @@ label{
 }
 .copy-text:hover::after , .copy-text:hover::before{
     display: initial;
+}
+button:hover i{
+    filter: brightness(100);
+}
+
+
+
+@media screen and (max-width:500px){
+    .container{
+        width: unset;
+    }
+    .section{
+        padding: 5px;
+    }
+    .div{
+        font-size: 15px;
+    }
+    #size{
+        width: 50%;
+    }
+    .copy-text{
+        width: 11%;
+        font-size: 20px;
+        height: 40px;
+
+    }
 }
