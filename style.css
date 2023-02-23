@@ -16,7 +16,7 @@ label{
     color: #2c00ff;
 }
 .container{
-    min-width: 40%;
+    width: 80%;
     margin: 0vh auto;
     border-radius: 5px;
 }
@@ -168,5 +168,17 @@ button:hover i{
         font-size: 20px;
         height: 40px;
 
+    }
+}
+
+@media screen and (max-width:700px){
+    .container{
+        max-width: 95%;
+    }
+}
+
+@media screen and (min-width:1100px){
+    .container{
+        width: 60%;
     }
 }
