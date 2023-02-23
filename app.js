@@ -51,11 +51,11 @@ const h = document.getElementById("btn");
         // console.log("helllo");
     })
 
-const text = document.getElementById("pass-box");
+// const text = document.getElementById("pass-box");
 
-if(text.value.length > 40){
-    text.querySelector("pass-box").classList.toggle("overflow");
-}
+// if(text.value.length > 40){
+//     text.querySelector("pass-box").classList.toggle("overflow");
+// }
 
 function cut(str , num){
     if(str.length > num){
@@ -65,4 +65,13 @@ function cut(str , num){
     else{
         return str
     }
+}
+
+function copyTextFromElement(elementID) {
+    let element = document.getElementById(elementID); //select the element
+    let elementText = element.textContent; //get the text content from the element
+    copyText(elementText); //use the copyText function below
+}
+function copyText(text) {
+    navigator.clipboard.writeText(text);
 }
