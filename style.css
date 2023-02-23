@@ -36,6 +36,10 @@ body{
 .text{
     background-color: #d9d7d7;
     margin-bottom: 15px;
+    padding: 0 15px;
+    overflow: scroll;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgb(51 49 49 / 20%);
 }
 .text span{
     /* border: 2px solid; */
@@ -58,8 +62,15 @@ body{
     border: #0F6EFF;
     color: white ;
 }
+.text::-webkit-scrollbar {
+    display: none;
+  }
 .head{
     text-align: center;
     font-size: 25px;
-    letter-spacing: 7.5px;
+    letter-spacing: 5.5px;
 }
+/* .overflow{
+    overflow-x: scroll;
+    -ms-scrollbar-track-color: #d9d7d7;
+} */

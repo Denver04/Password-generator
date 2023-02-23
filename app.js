@@ -51,6 +51,12 @@ const h = document.getElementById("btn");
         // console.log("helllo");
     })
 
+const text = document.getElementById("pass-box");
+
+if(text.value.length > 40){
+    text.querySelector("pass-box").classList.toggle("overflow");
+}
+
 function cut(str , num){
     if(str.length > num){
         let substr = str.substring(0,num);
